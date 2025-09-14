@@ -1,0 +1,59 @@
+{
+  "name": "UserProfile",
+  "type": "object",
+  "properties": {
+    "nickname": {
+      "type": "string",
+      "description": "User's preferred name for Emma to use"
+    },
+    "age_group": {
+      "type": "string",
+      "enum": [
+        "child",
+        "teen",
+        "adult",
+        "midlife",
+        "senior"
+      ],
+      "description": "Age category for personalized responses"
+    },
+    "preferred_support_type": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "motivation",
+          "stress_relief",
+          "jokes",
+          "reflection",
+          "advice"
+        ]
+      },
+      "description": "Types of support user prefers"
+    },
+    "daily_checkin_time": {
+      "type": "string",
+      "description": "Preferred time for daily check-ins"
+    },
+    "timezone": {
+      "type": "string",
+      "description": "User's timezone"
+    },
+    "onboarding_completed": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether user has completed onboarding"
+    },
+    "conversation_history_count": {
+      "type": "number",
+      "default": 0,
+      "description": "Track number of conversations"
+    },
+    "auto_play_audio": {
+      "type": "boolean",
+      "default": true,
+      "description": "Automatically play Emma's responses as audio"
+    }
+  },
+  "required": []
+}

@@ -1,0 +1,48 @@
+{
+  "name": "Conversation",
+  "type": "object",
+  "properties": {
+    "user_message": {
+      "type": "string",
+      "description": "The user's message"
+    },
+    "emma_response": {
+      "type": "string",
+      "description": "Emma's response"
+    },
+    "detected_emotion": {
+      "type": "string",
+      "enum": [
+        "happy",
+        "sad",
+        "stressed",
+        "angry",
+        "anxious",
+        "lonely",
+        "excited",
+        "neutral",
+        "crisis"
+      ],
+      "description": "Detected emotion from user message"
+    },
+    "response_type": {
+      "type": "string",
+      "enum": [
+        "comfort_joke",
+        "advice",
+        "crisis_support",
+        "general_chat",
+        "celebration"
+      ],
+      "description": "Type of response given"
+    },
+    "session_id": {
+      "type": "string",
+      "description": "Groups messages in the same conversation session"
+    }
+  },
+  "required": [
+    "user_message",
+    "emma_response"
+  ]
+}

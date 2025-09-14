@@ -1,0 +1,45 @@
+{
+  "name": "MoodEntry",
+  "type": "object",
+  "properties": {
+    "mood_score": {
+      "type": "number",
+      "minimum": 1,
+      "maximum": 10,
+      "description": "Mood rating from 1-10"
+    },
+    "primary_emotion": {
+      "type": "string",
+      "enum": [
+        "happy",
+        "sad",
+        "stressed",
+        "angry",
+        "anxious",
+        "lonely",
+        "excited",
+        "neutral",
+        "overwhelmed",
+        "peaceful"
+      ],
+      "description": "Primary emotion felt"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Optional notes about the mood"
+    },
+    "checkin_type": {
+      "type": "string",
+      "enum": [
+        "daily",
+        "conversation",
+        "manual"
+      ],
+      "description": "How this mood entry was created"
+    }
+  },
+  "required": [
+    "mood_score",
+    "primary_emotion"
+  ]
+}
